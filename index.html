@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dollars — US dollars, for 80¢</title>
-<meta name="description" content="Dollars sells US dollars for 80¢. Most AI startups spend years building a product with negative gross margins. We skipped straight to the end.">
+<meta name="description" content="Dollars sells US dollars for 80¢. Most AI startups spend years building a product with negative gross margins. We skipped straight to the end. (A parody.)">
 <meta name="theme-color" content="#F7F6F1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#070D0A" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -429,6 +429,11 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px;font-size:14px;color
 .foot-tag{margin-top:14px;max-width:280px}
 .sys{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:6px 12px;border:1px solid var(--line-2);border-radius:999px;font-size:12.5px;color:var(--ink-2);background:var(--surface)}
 .sys i{width:7px;height:7px;border-radius:50%;background:var(--gain)}
+.disc{margin-top:56px;padding:28px 30px;border:1px solid var(--line-2);border-radius:16px;background:var(--surface);color:var(--ink-2)}
+.disc h4{font-size:16px;font-weight:650;color:var(--ink);margin:0 0 6px;letter-spacing:-.01em}
+.disc > p{font-size:14.5px}
+.disc ul{margin:16px 0 0;padding-left:18px;display:grid;gap:8px;font-size:14px;line-height:1.55}
+.disc li::marker{color:var(--faint)}
 .legal{display:flex;justify-content:space-between;gap:24px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint)}
 .legal p + p{text-align:right}
 
@@ -636,7 +641,7 @@ dialog[open]::backdrop{animation:fade .2s ease}
       <span class="trust-sep" aria-hidden="true"></span>
       <span>SOC 2 Type II</span>
       <span class="trust-sep" aria-hidden="true"></span>
-      <span>FDIC-adjacent</span>
+      <span>Bank-adjacent</span>
     </div>
   </div>
 
@@ -1089,11 +1094,23 @@ dialog[open]::backdrop{animation:fade .2s ease}
       </div>
       <div><h4>Product</h4><ul><li><a href="#calculator">Savings calculator</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#developers">API</a></li><li><a href="#roadmap">Roadmap</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="#economics">Unit economics</a></li><li><a href="#careers">Careers</a></li><li><a href="#investors">Investors</a></li><li><button type="button" data-toast="press">Press</button></li></ul></div>
-      <div><h4>Legal</h4><ul><li><button type="button" data-toast="legal">Terms</button></li><li><button type="button" data-toast="legal">Privacy</button></li><li><button type="button" data-toast="legal">Disclosures</button></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#legal">Terms</a></li><li><a href="#legal">Privacy</a></li><li><a href="#legal">Disclosures</a></li></ul></div>
     </div>
+    <section class="disc" id="legal" aria-labelledby="legal-title">
+      <h4 id="legal-title">This site is a parody</h4>
+      <p>Dollars is a joke. Please don’t take any of it seriously.</p>
+      <ul>
+        <li>Dollars, Inc. isn’t a real company. It doesn’t sell, buy or hold money, and it never will.</li>
+        <li>Nothing here can be bought. The Buy buttons take no payment and ask for no personal or financial details.</li>
+        <li>Nothing here is financial, investment, tax or legal advice.</li>
+        <li>The people, quotes, customers, investors, logos and metrics are made up. Your browser works out the live counters from its clock.</li>
+        <li>Dollars isn’t affiliated with, endorsed by or sponsored by Y Combinator, Hacker News, any bank, the FDIC or any company named here. It isn’t a bank, and it has no SOC 2 report and no deposit insurance.</li>
+        <li>Privacy: this site has no accounts, analytics or cookies. Its fonts load from Google Fonts.</li>
+      </ul>
+    </section>
     <div class="legal">
-      <p>© 2026 Dollars, Inc. Dollars is not a bank. Dollars is barely a business.</p>
-      <p>This site is a parody. We don’t sell dollars, and nothing here can be bought.</p>
+      <p>© 2026 Dollars. A parody, not a real company, product or offer.</p>
+      <p>Not financial advice. Not a bank. Not serious.</p>
     </div>
   </div>
 </footer>
@@ -1133,7 +1150,7 @@ dialog[open]::backdrop{animation:fade .2s ease}
         <div class="sold-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16h.01"/></svg></div>
         <h3>We’re sold out of dollars.</h3>
         <p>Demand for 80¢ dollars has outpaced our Series A. You’re <b id="w-pos" class="num">#48,213</b> on the waitlist. We’ll release more dollars after our Series B closes.</p>
-        <p style="font-size:13px;color:var(--faint)">You haven’t been charged.</p>
+        <p style="font-size:13px;color:var(--faint)">You haven’t been charged. This site is a parody, and nothing here can be bought.</p>
         <button class="btn btn-primary btn-block" type="button" data-close>Back to site</button>
       </div>
     </div>
@@ -1234,8 +1251,7 @@ dialog[open]::backdrop{animation:fade .2s ease}
     sell: 'Sell dollars? For dollars? No one has ever asked.',
     role: 'This role was filled by our CEO. So were the others.',
     status: 'All systems operational. Margins are not.',
-    press: 'For press inquiries, please wait for the post-mortem.',
-    legal: 'Our legal team has moved on to other opportunities.'
+    press: 'For press inquiries, please wait for the post-mortem.'
   };
   const toastEl = $('#toast'); let toastT;
   function toast(msg) {
