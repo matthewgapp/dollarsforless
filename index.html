@@ -39,7 +39,7 @@
   --loss:#C2410C; --loss-soft:rgba(194,65,12,.08);
   --btn:#0C1612; --btn-ink:#F7F6F1; --btn-hover:#1C2A24;
   --bar:#0C1612; --bar-ink:#C9D5CE; --bar-strong:#FFFFFF;
-  --yc:#F26522;
+  --gen:#E2462C;
   --shadow:0 1px 2px rgba(12,22,18,.04), 0 6px 20px -8px rgba(12,22,18,.10);
   --shadow-lg:0 1px 2px rgba(12,22,18,.05), 0 30px 80px -24px rgba(12,22,18,.28);
   --code-bg:#0A1310; --code-line:rgba(255,255,255,.07); --code-ink:#D2DED7; --code-muted:#6E7F76;
@@ -134,8 +134,8 @@ h1 em{color:var(--accent);font-style:italic;letter-spacing:-.02em}
 .cta-row{display:flex;justify-content:center;gap:12px;margin-top:34px}
 .trust{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:28px;font-size:13.5px;color:var(--muted);flex-wrap:wrap}
 .trust-sep{width:3px;height:3px;border-radius:50%;background:var(--faint)}
-.yc{display:inline-flex;align-items:center;gap:8px;color:var(--ink-2);font-weight:500}
-.yc-mark{width:20px;height:20px;border-radius:3px;background:var(--yc);color:#fff;font:700 13px/20px var(--sans);text-align:center;flex:none}
+.gen{display:inline-flex;align-items:center;gap:8px;color:var(--ink-2);font-weight:500}
+.gen-mark{width:20px;height:20px;border-radius:4px;background:var(--gen);color:#fff;font:700 13px/20px var(--sans);text-align:center;flex:none}
 
 /* App mock */
 .mock-wrap{margin-top:64px;padding-bottom:0}
@@ -490,14 +490,14 @@ pre{margin:0;padding:20px 22px;font:13px/1.75 var(--mono);overflow-x:auto;tab-si
 .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:600 14px/1 var(--sans);color:#fff;flex:none}
 .who b{display:block;font-size:14.5px;font-weight:600}
 .who small{display:block;font-size:13px;color:var(--muted)}
-.av-hn{border-radius:6px;background:var(--yc);font-size:18px}
+.av-up{border-radius:9px;background:var(--surface-2);border:1px solid var(--line-2);color:var(--muted);font-size:13px}
 
 /* Investors */
 .inv{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px}
 .inv-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .inv-list > div{background:var(--surface);height:92px;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 16px;color:var(--ink-2);text-align:center}
-.inv-list .yc-cell{font:600 17px/1 var(--sans);letter-spacing:-.02em;color:var(--ink)}
-.inv-list .yc-cell .yc-mark{width:26px;height:26px;font-size:16px;line-height:26px}
+.inv-list .gen-cell{font:600 17px/1 var(--sans);letter-spacing:-.02em;color:var(--ink)}
+.inv-list .gen-cell .gen-mark{width:26px;height:26px;font-size:16px;line-height:26px}
 .f1{font:400 22px/1.1 var(--serif)}
 .f2{font:600 13px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase}
 .f3{font:italic 400 22px/1.1 var(--serif)}
@@ -680,8 +680,8 @@ dialog[open]::backdrop{animation:fade .2s ease}
   .cta-row{flex-direction:column;align-items:stretch;gap:10px;margin-top:28px}
   .final .cta-row{align-items:stretch}
   .trust{gap:10px 12px}
-  .trust .yc{flex-basis:100%;justify-content:center}
-  .trust .yc + .trust-sep{display:none}
+  .trust .gen{flex-basis:100%;justify-content:center}
+  .trust .gen + .trust-sep{display:none}
   .mock-wrap{margin-top:44px;padding:0 12px}
   .app{border-radius:14px 14px 0 0}
   .app-url{display:none}
@@ -807,9 +807,9 @@ dialog[open]::backdrop{animation:fade .2s ease}
       <a class="btn btn-secondary btn-lg" href="#pricing">See plans</a>
     </div>
     <div class="trust">
-      <span class="yc"><span class="yc-mark" aria-hidden="true">$</span>Backed by $ Combinator</span>
+      <span class="gen"><span class="gen-mark" aria-hidden="true">$</span>Backed by $ Generator</span>
       <span class="trust-sep" aria-hidden="true"></span>
-      <span>SOC 2 Type II</span>
+      <span>SAC III Type III</span>
       <span class="trust-sep" aria-hidden="true"></span>
       <span>Bank-adjacent</span>
     </div>
@@ -946,7 +946,7 @@ dialog[open]::backdrop{animation:fade .2s ease}
       <div class="feat">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.4 3.2 8.1 7.5 9 4.3-.9 7.5-4.6 7.5-9V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
         <h3>Bank-grade security</h3>
-        <p>SOC 2 Type II, end-to-end encryption, and a finance team that counts every dollar on its way out the door.</p>
+        <p>SAC III Type III, end-to-end encryption, and a finance team that counts every dollar on its way out the door.</p>
       </div>
       <div class="feat">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
@@ -1332,7 +1332,7 @@ plan.status  <span class="c-m"># "active"</span></pre>
       </figure>
       <figure class="card quote" style="margin:0">
         <blockquote>“I don’t get it. Can’t you just have a dollar?”</blockquote>
-        <figcaption class="who"><span class="av av-hn">Y</span><span><b>Top comment</b><small>Hacker News</small></span></figcaption>
+        <figcaption class="who"><span class="av av-up">▲</span><span><b>Top comment</b><small>An orange website</small></span></figcaption>
       </figure>
     </div>
   </div>
@@ -1344,7 +1344,7 @@ plan.status  <span class="c-m"># "active"</span></pre>
     <h2>Backed by investors who believe in volume.</h2>
     <div class="inv">
       <div class="inv-list">
-        <div class="yc-cell"><span class="yc-mark" aria-hidden="true">$</span>$ Combinator</div>
+        <div class="gen-cell"><span class="gen-mark" aria-hidden="true">$</span>$ Generator</div>
         <div class="f1">Greater Fool Capital</div>
         <div class="f2">Exit Liquidity Partners</div>
         <div class="f3">Bagholder Ventures</div>
@@ -1492,7 +1492,7 @@ plan.status  <span class="c-m"># "active"</span></pre>
         <li>Nothing here can be bought. There is no subscription, card, crypto conversion, delivery service, API or agent integration. The Buy buttons take no payment and ask for no personal or financial details.</li>
         <li>Nothing here is financial, investment, tax or legal advice.</li>
         <li>The people, quotes, customers, investors, logos and metrics are made up. Your browser works out the live counters from its clock.</li>
-        <li>Dollars isn’t affiliated with, endorsed by or sponsored by Y Combinator, Hacker News, Anthropic (Claude Code), OpenAI (Codex), the makers of Pi, any bank, card network or crypto network, the FDIC, or any company named here. It isn’t a bank, and it has no SOC 2 report and no deposit insurance.</li>
+        <li>Dollars isn’t affiliated with, endorsed by or sponsored by Y Combinator, Hacker News, Anthropic (Claude Code), OpenAI (Codex), the makers of Pi, any bank, card network or crypto network, the FDIC, or any company named here. It isn’t a bank, holds no security certification (SAC III Type III isn’t real) and has no deposit insurance.</li>
         <li>Privacy: this site has no accounts, analytics or cookies. Its fonts load from Google Fonts.</li>
       </ul>
     </section>
