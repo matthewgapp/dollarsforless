@@ -1,0 +1,1340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dollars — US dollars, for 80¢</title>
+<meta name="description" content="Dollars sells US dollars for 80¢. Most AI startups spend years building a product with negative gross margins. We skipped straight to the end.">
+<meta name="theme-color" content="#F7F6F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070D0A" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://dollarsforless.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dollarsforless.com/">
+<meta property="og:site_name" content="Dollars">
+<meta property="og:title" content="Dollars — US dollars, for 80¢">
+<meta property="og:description" content="Most AI startups spend years building a product with negative gross margins. We skipped straight to the end.">
+<meta property="og:image" content="https://dollarsforless.com/og.jpg">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Dollars: US dollars, for 80¢. A one-dollar bill with a price tag reading “was $1.00, now $0.80”.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dollars — US dollars, for 80¢">
+<meta name="twitter:description" content="Most AI startups spend years building a product with negative gross margins. We skipped straight to the end.">
+<meta name="twitter:image" content="https://dollarsforless.com/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F7F6F1; --bg-2:#EFEDE5; --surface:#FFFFFF; --surface-2:#F5F3EE;
+  --ink:#0C1612; --ink-2:#36443D; --muted:#66726B; --faint:#98A29C;
+  --line:rgba(12,22,18,.09); --line-2:rgba(12,22,18,.16);
+  --accent:#0A6B4B; --accent-soft:rgba(10,107,75,.08); --accent-line:rgba(10,107,75,.22);
+  --gain:#0A7F55; --gain-soft:rgba(10,127,85,.09);
+  --loss:#C2410C; --loss-soft:rgba(194,65,12,.08);
+  --btn:#0C1612; --btn-ink:#F7F6F1; --btn-hover:#1C2A24;
+  --bar:#0C1612; --bar-ink:#C9D5CE; --bar-strong:#FFFFFF;
+  --yc:#F26522;
+  --shadow:0 1px 2px rgba(12,22,18,.04), 0 6px 20px -8px rgba(12,22,18,.10);
+  --shadow-lg:0 1px 2px rgba(12,22,18,.05), 0 30px 80px -24px rgba(12,22,18,.28);
+  --code-bg:#0A1310; --code-line:rgba(255,255,255,.07); --code-ink:#D2DED7; --code-muted:#6E7F76;
+  --code-key:#8FD4B5; --code-str:#E9C98B; --code-num:#F2A27A; --code-fn:#9CC3FF;
+  --serif:"Instrument Serif", ui-serif, Georgia, serif;
+  --sans:"Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#070D0A; --bg-2:#0A120E; --surface:#0E1814; --surface-2:#13201A;
+    --ink:#E9EFEB; --ink-2:#B4C1B9; --muted:#85928A; --faint:#5A6760;
+    --line:rgba(233,239,235,.08); --line-2:rgba(233,239,235,.15);
+    --accent:#3AD69B; --accent-soft:rgba(58,214,155,.09); --accent-line:rgba(58,214,155,.25);
+    --gain:#3AD69B; --gain-soft:rgba(58,214,155,.10);
+    --loss:#FB8A4C; --loss-soft:rgba(251,138,76,.10);
+    --btn:#E9EFEB; --btn-ink:#07110C; --btn-hover:#FFFFFF;
+    --bar:#0E1814; --bar-ink:#9AA9A1; --bar-strong:#E9EFEB;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px -8px rgba(0,0,0,.5);
+    --shadow-lg:0 1px 2px rgba(0,0,0,.4), 0 30px 80px -24px rgba(0,0,0,.8);
+    --code-bg:#050A08;
+    color-scheme:dark;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;font-feature-settings:"cv11","ss01"}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4,p{margin:0}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.gain{color:var(--gain)} .loss{color:var(--loss)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* Ticker */
+.ticker{background:var(--bar);color:var(--bar-ink);font-size:13px;border-bottom:1px solid var(--line)}
+.ticker-in{display:flex;align-items:center;justify-content:center;gap:8px;height:36px;white-space:nowrap}
+.ticker strong{color:var(--bar-strong);font-weight:600;letter-spacing:-.005em}
+.t-sep{opacity:.45}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#3AD69B;box-shadow:0 0 0 0 rgba(58,214,155,.55);animation:pulse 2s infinite;flex:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(58,214,155,.5)}70%{box-shadow:0 0 0 7px rgba(58,214,155,0)}100%{box-shadow:0 0 0 0 rgba(58,214,155,0)}}
+.t-live{color:#3AD69B;font-weight:600;letter-spacing:.06em;font-size:11px;text-transform:uppercase}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--bg) 82%, transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;height:64px;gap:32px}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.mark{width:26px;height:26px;color:var(--accent)}
+.word{font-weight:650;font-size:18px;letter-spacing:-.03em;color:var(--ink)}
+.links{display:flex;gap:28px;font-size:14.5px;color:var(--ink-2)}
+.links a{transition:color .15s}
+.links a:hover{color:var(--ink)}
+.nav-cta{margin-left:auto;display:flex;align-items:center;gap:8px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;
+  font:600 15px/1 var(--sans);letter-spacing:-.01em;border:1px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:background .15s, border-color .15s, transform .15s, box-shadow .15s}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--btn);color:var(--btn-ink)}
+.btn-primary:hover{background:var(--btn-hover)}
+.btn-secondary{background:var(--surface);color:var(--ink);border-color:var(--line-2)}
+.btn-secondary:hover{border-color:var(--faint)}
+.btn-ghost{background:none;border:0;height:36px;padding:0 12px;font-weight:550;font-size:14.5px;color:var(--ink-2);cursor:pointer;border-radius:999px}
+.btn-ghost:hover{color:var(--ink);background:var(--accent-soft)}
+.btn-sm{height:36px;padding:0 16px;font-size:14px}
+.btn-lg{height:52px;padding:0 28px;font-size:16px}
+.btn-block{width:100%}
+.btn svg{width:16px;height:16px}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:76px 0 0;text-align:center;
+  background:radial-gradient(1100px 520px at 50% -8%, var(--accent-soft), transparent 70%)}
+.rosette{position:absolute;left:50%;top:-40px;width:1180px;height:760px;transform:translateX(-50%);pointer-events:none;color:var(--accent);opacity:.55;
+  -webkit-mask-image:radial-gradient(closest-side, #000 30%, transparent 100%);mask-image:radial-gradient(closest-side, #000 30%, transparent 100%)}
+.hero .wrap{position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 14px 0 4px;border-radius:999px;background:var(--surface);border:1px solid var(--line-2);font-size:13.5px;color:var(--ink-2);box-shadow:var(--shadow);transition:border-color .15s;white-space:nowrap}
+.pill:hover{border-color:var(--faint)}
+.pill-tag{height:26px;display:inline-flex;align-items:center;padding:0 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:12px;border:1px solid var(--accent-line)}
+.pill .arrow{color:var(--muted)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(60px, 17vw, 136px);line-height:.92;letter-spacing:-.03em;margin:30px 0 26px}
+h1 em{color:var(--accent);font-style:italic;letter-spacing:-.02em}
+.lede{max-width:620px;margin:0 auto;font-size:19px;line-height:1.55;color:var(--ink-2);text-wrap:pretty}
+.cta-row{display:flex;justify-content:center;gap:12px;margin-top:34px}
+.trust{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:28px;font-size:13.5px;color:var(--muted);flex-wrap:wrap}
+.trust-sep{width:3px;height:3px;border-radius:50%;background:var(--faint)}
+.yc{display:inline-flex;align-items:center;gap:8px;color:var(--ink-2);font-weight:500}
+.yc-mark{width:20px;height:20px;border-radius:3px;background:var(--yc);color:#fff;font:700 13px/20px var(--sans);text-align:center;flex:none}
+
+/* App mock */
+.mock-wrap{margin-top:64px;padding-bottom:0}
+.app{max-width:1080px;margin:0 auto;background:var(--surface);border:1px solid var(--line-2);border-radius:18px 18px 0 0;border-bottom:0;box-shadow:var(--shadow-lg);overflow:hidden;text-align:left}
+.app-bar{display:flex;align-items:center;height:42px;padding:0 16px;border-bottom:1px solid var(--line);background:var(--surface-2);position:relative}
+.dots{display:flex;gap:7px}
+.dots i{width:11px;height:11px;border-radius:50%;background:var(--line-2)}
+.app-url{position:absolute;left:50%;transform:translateX(-50%);font-size:12px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:3px 14px;display:flex;align-items:center;gap:6px}
+.app-url svg{width:11px;height:11px}
+.app-body{display:grid;grid-template-columns:212px 1fr;min-height:540px}
+.app-side{border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:2px;background:var(--surface)}
+.side-org{display:flex;align-items:center;gap:10px;padding:6px 8px 16px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.org-av{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#1E5B8C,#0E2F4D);color:#fff;font:600 14px/30px var(--sans);text-align:center;flex:none}
+.side-org b{display:block;font-size:13.5px;font-weight:600;line-height:1.2}
+.side-org small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.side-item{display:flex;align-items:center;gap:10px;height:34px;padding:0 10px;border-radius:8px;font-size:13.5px;color:var(--ink-2)}
+.side-item svg{width:16px;height:16px;color:var(--muted)}
+.side-item.on{background:var(--accent-soft);color:var(--ink);font-weight:550}
+.side-item.on svg{color:var(--accent)}
+.side-foot{margin-top:auto;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2)}
+.side-foot small{display:block;font-size:11.5px;color:var(--muted)}
+.side-foot b{display:block;font-size:20px;font-weight:600;letter-spacing:-.02em;color:var(--gain);margin-top:2px}
+.app-main{padding:22px 24px 24px;background:var(--bg-2);min-width:0}
+.app-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;gap:12px}
+.app-head h3{font-size:18px;font-weight:600;letter-spacing:-.02em}
+.badge{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:550;background:var(--gain-soft);color:var(--gain);white-space:nowrap}
+.badge svg{width:12px;height:12px}
+.app-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.panel{padding:18px}
+.panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px}
+.panel-head h4{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.seg{display:inline-flex;padding:3px;border-radius:9px;background:var(--surface-2);border:1px solid var(--line)}
+.seg button{border:0;background:none;height:26px;padding:0 12px;border-radius:7px;font-size:12.5px;font-weight:550;color:var(--muted);cursor:pointer}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08), 0 0 0 1px var(--line)}
+.fields{position:relative;display:flex;flex-direction:column;gap:6px}
+.field{display:block;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:11px 14px 12px;transition:border-color .15s, box-shadow .15s}
+.field:focus-within{border-color:var(--accent-line);box-shadow:0 0 0 3px var(--accent-soft)}
+.f-label{display:block;font-size:12px;color:var(--muted);font-weight:500}
+.f-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:2px}
+.f-amt{font:600 26px/1.25 var(--sans);letter-spacing:-.025em;font-variant-numeric:tabular-nums;border:0;background:none;color:var(--ink);padding:0;width:100%;min-width:0;outline:none}
+.ccy{display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 10px 0 4px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:13px;font-weight:600;flex:none}
+.ccy i{width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--surface);font:700 12px/22px var(--sans);font-style:normal;text-align:center}
+.swap{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:9px;background:var(--surface);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--ink-2);z-index:1}
+.swap svg{width:14px;height:14px}
+.rate{margin:14px 2px 16px;display:grid;gap:7px;font-size:13px}
+.rate div{display:flex;justify-content:space-between;gap:12px}
+.rate dt{color:var(--muted)} .rate dd{margin:0;font-weight:550;font-variant-numeric:tabular-nums}
+.p-bal{font-size:32px;font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.p-delta{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:13px;color:var(--muted)}
+.up{display:inline-flex;align-items:center;gap:4px;color:var(--gain);font-weight:600;background:var(--gain-soft);padding:2px 8px;border-radius:6px}
+.chart{width:100%;height:150px;margin-top:16px;overflow:visible}
+.chart-x{display:flex;justify-content:space-between;font-size:11.5px;color:var(--faint);margin-top:6px}
+.legend{display:flex;gap:16px;margin-top:12px;font-size:12px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:2px;border-radius:2px;background:var(--accent)}
+.legend i.cost{background:repeating-linear-gradient(90deg,var(--faint) 0 4px,transparent 4px 7px)}
+.orders{margin-top:16px}
+.orders .panel-head{padding:16px 18px 0;margin-bottom:8px}
+.link-sm{font-size:13px;color:var(--accent);font-weight:550}
+table{border-collapse:collapse;width:100%}
+.tbl{font-size:13px}
+.tbl th{font-weight:500;color:var(--muted);text-align:left;padding:8px 18px;border-bottom:1px solid var(--line);font-size:12px;white-space:nowrap}
+.tbl td{padding:11px 18px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl tr:last-child td{border-bottom:0}
+.tbl .r{text-align:right}
+.mono{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.status{display:inline-flex;align-items:center;gap:6px;font-weight:550;color:var(--gain)}
+.status::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* Logos */
+.logos{padding:56px 0 64px;border-top:1px solid var(--line);background:var(--bg)}
+.logos p{text-align:center;font-size:13.5px;color:var(--muted)}
+.logo-row{display:flex;justify-content:space-between;align-items:center;gap:28px 40px;margin-top:28px;flex-wrap:wrap;color:var(--ink-2);opacity:.78}
+.lg{white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.lg1{font:600 21px/1 var(--serif);letter-spacing:.14em;text-transform:uppercase}
+.lg2{font:600 21px/1 var(--sans);letter-spacing:-.045em}
+.lg3{font:italic 400 25px/1 var(--serif)}
+.lg4{font:700 14px/1 var(--mono);letter-spacing:.12em}
+.lg5{font:500 20px/1 var(--sans);letter-spacing:-.02em}
+.lg6{font:400 24px/1 var(--serif);letter-spacing:-.01em}
+.lg svg{width:20px;height:20px}
+
+/* Stats */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:36px 28px;border-left:1px solid var(--line);min-width:0}
+.stat:first-child{border-left:0;padding-left:0}
+.stat-v{font-size:34px;font-weight:600;letter-spacing:-.035em;line-height:1.1}
+.stat-l{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:13.5px;color:var(--muted)}
+
+/* Sections */
+.section{padding:120px 0}
+.section + .section{border-top:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:16px;height:1px;background:currentColor}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px, 5.4vw, 64px);line-height:1.02;letter-spacing:-.022em;margin-top:16px;text-wrap:balance}
+h2 em{font-style:italic;color:var(--accent)}
+.sub{margin-top:18px;font-size:18px;color:var(--ink-2);max-width:620px;text-wrap:pretty}
+.head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
+.head-row .sub{max-width:420px;margin:0}
+
+/* Thesis + TAM */
+.thesis{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.gtm{display:grid;grid-template-columns:repeat(3,1fr);margin:36px 0 0;border-top:1px solid var(--line)}
+.gtm div{padding:18px 16px 0 0}
+.gtm div + div{padding-left:16px;border-left:1px solid var(--line)}
+.gtm dt{font-size:13px;color:var(--muted)}
+.gtm dd{margin:4px 0 0;font-size:22px;font-weight:600;letter-spacing:-.025em;white-space:nowrap}
+.tam{margin:0;padding:36px 32px 24px;display:flex;flex-direction:column;align-items:center}
+.tam-circle{width:min(100%,340px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;position:relative;
+  background:radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--accent) 16%, transparent), var(--accent-soft) 70%);
+  box-shadow:inset 0 0 0 1px var(--accent-line), inset 0 0 0 1px var(--accent-line), inset 0 0 0 1px var(--accent-line)}
+.tam-tags{display:flex;gap:6px;justify-content:center}
+.tam-tags b{font-size:11.5px;font-weight:600;letter-spacing:.08em;color:var(--accent);background:var(--surface);border:1px solid var(--accent-line);border-radius:999px;padding:3px 9px}
+.tam-v{display:block;font-family:var(--serif);font-size:clamp(64px,8vw,92px);line-height:1;letter-spacing:-.02em;margin-top:14px}
+.tam-l{display:block;font-size:14px;color:var(--ink-2);margin-top:8px;padding:0 24px}
+.tam figcaption{margin-top:18px;font-size:13px;color:var(--faint);font-style:italic}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.feat{background:var(--surface);padding:32px 30px 34px}
+.ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-line)}
+.ico svg{width:20px;height:20px}
+.feat h3{margin-top:22px;font-size:17px;font-weight:600;letter-spacing:-.015em}
+.feat p{margin-top:8px;font-size:15px;color:var(--ink-2);line-height:1.6}
+
+/* Unit economics */
+.ue{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;margin-top:56px}
+.flow{display:grid;gap:12px}
+.step{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:16px;padding:18px 20px}
+.step-n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:400 22px/1 var(--serif);background:var(--surface-2);border:1px solid var(--line-2)}
+.step h3{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.step p{font-size:14px;color:var(--muted);margin-top:2px}
+.step-amt{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.pl{padding:26px 28px}
+.pl h3{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pl table{margin-top:14px;font-size:15px}
+.pl td{padding:12px 0;border-bottom:1px solid var(--line)}
+.pl td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:550;white-space:nowrap}
+.pl tr.total td{font-weight:650;border-bottom:0}
+.pl tr.rule td{border-bottom:1px solid var(--line-2)}
+.pl small{display:block;margin-top:14px;font-size:12.5px;color:var(--faint);font-style:italic}
+
+/* Calculator */
+.calc{display:grid;grid-template-columns:1fr 1fr;margin-top:56px;overflow:hidden}
+.calc-in{padding:36px}
+.calc-in + .calc-in{border-left:1px solid var(--line);background:var(--surface-2)}
+.calc-q{font-size:14px;color:var(--muted);font-weight:500}
+.calc-amt{font-size:clamp(40px,5vw,56px);font-weight:600;letter-spacing:-.04em;line-height:1.1;margin-top:8px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;margin:26px 0 6px;cursor:pointer;--p:40%}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--accent) 0 var(--p),var(--line-2) var(--p) 100%)}
+input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--accent) 0 var(--p),var(--line-2) var(--p) 100%)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--surface);border:1px solid var(--line-2);box-shadow:0 2px 6px rgba(0,0,0,.18);margin-top:-9px}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--surface);border:1px solid var(--line-2);box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.ticks{display:flex;justify-content:space-between;font-size:12px;color:var(--faint)}
+.calc-note{margin-top:28px;display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-2);min-height:22px}
+.calc-note svg{width:16px;height:16px;color:var(--accent);flex:none}
+.res{display:grid;gap:0}
+.res div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.res dt{color:var(--ink-2)}
+.res dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.res .big dd{font-size:22px;letter-spacing:-.02em}
+.meter{margin-top:22px}
+.meter-top{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)}
+.meter-top b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.meter-bar{height:8px;border-radius:8px;background:var(--line-2);margin-top:10px;overflow:hidden}
+.meter-bar i{display:block;height:100%;border-radius:8px;background:var(--accent);transition:width .2s}
+
+/* Developers */
+.dev{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.checks{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
+.checks li{display:flex;gap:12px;font-size:15.5px;color:var(--ink-2)}
+.checks svg{width:18px;height:18px;color:var(--accent);flex:none;margin-top:3px}
+.code{background:var(--code-bg);border-radius:16px;border:1px solid var(--line-2);box-shadow:var(--shadow-lg);overflow:hidden;color:var(--code-ink)}
+.code-bar{display:flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-bottom:1px solid var(--code-line);font-size:12.5px;color:var(--code-muted)}
+.code-bar .meth{font:600 11px/1 var(--mono);color:#0A1310;background:#8FD4B5;padding:4px 6px;border-radius:5px}
+.code-bar .path{font-family:var(--mono);color:var(--code-ink)}
+.code-bar .lang{margin-left:auto;display:flex;gap:4px}
+.code-bar .lang span{padding:4px 8px;border-radius:6px}
+.code-bar .lang span.on{background:rgba(255,255,255,.08);color:var(--code-ink)}
+pre{margin:0;padding:20px 22px;font:13px/1.75 var(--mono);overflow-x:auto;tab-size:2}
+.code-mid{display:flex;align-items:center;gap:10px;padding:10px 22px;border-top:1px solid var(--code-line);border-bottom:1px solid var(--code-line);font:500 12px/1 var(--mono);color:var(--code-muted);background:rgba(255,255,255,.02)}
+.code-mid b{color:#8FD4B5;font-weight:500}
+.c-k{color:var(--code-key)} .c-s{color:var(--code-str)} .c-n{color:var(--code-num)} .c-f{color:var(--code-fn)} .c-m{color:var(--code-muted)}
+
+/* Compare */
+.compare{margin-top:48px;overflow:hidden}
+.cmp th,.cmp td{padding:18px 24px;border-bottom:1px solid var(--line);text-align:left;font-size:15px}
+.cmp thead th{font-size:13.5px;font-weight:600;color:var(--muted);background:var(--surface-2);line-height:20px;vertical-align:middle}
+.cmp thead th.us{color:var(--ink)}
+.cmp tbody th{font-weight:500;color:var(--ink-2)}
+.cmp td{font-variant-numeric:tabular-nums}
+.cmp .us{background:var(--accent-soft)}
+.cmp tbody td.us{font-weight:650}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+.us-h{display:flex;align-items:center;gap:8px;height:20px}
+.us-h svg{width:18px;height:18px;color:var(--accent)}
+
+/* Testimonials */
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px}
+.quote{padding:30px 30px 26px;display:flex;flex-direction:column}
+.quote blockquote{margin:0;font-family:var(--serif);font-size:25px;line-height:1.25;letter-spacing:-.005em;text-wrap:pretty}
+.who{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:26px}
+.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:600 14px/1 var(--sans);color:#fff;flex:none}
+.who b{display:block;font-size:14.5px;font-weight:600}
+.who small{display:block;font-size:13px;color:var(--muted)}
+.av-hn{border-radius:6px;background:var(--yc);font-size:18px}
+
+/* Investors */
+.inv{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px}
+.inv-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.inv-list > div{background:var(--surface);height:92px;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 16px;color:var(--ink-2);text-align:center}
+.inv-list .yc-cell{font:600 17px/1 var(--sans);letter-spacing:-.02em;color:var(--ink)}
+.inv-list .yc-cell .yc-mark{width:26px;height:26px;font-size:16px;line-height:26px}
+.f1{font:400 22px/1.1 var(--serif)}
+.f2{font:600 13px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.f3{font:italic 400 22px/1.1 var(--serif)}
+.f4{font:600 17px/1.1 var(--sans);letter-spacing:-.03em}
+.inv-list .angels{grid-column:span 2;height:auto;padding:18px 16px;font-size:13.5px;color:var(--muted)}
+.inv-quote blockquote{margin:0;font-family:var(--serif);font-size:clamp(30px,3.4vw,40px);line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+.inv-quote blockquote::before{content:"“";display:block;font-size:80px;line-height:.6;color:var(--accent);height:34px}
+.inv-quote p{margin-top:22px;font-size:14.5px;color:var(--muted)}
+
+/* Pricing */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;align-items:stretch}
+.plan{padding:30px;display:flex;flex-direction:column;position:relative}
+.plan.pop{border-color:var(--accent-line);box-shadow:0 0 0 1px var(--accent-line), var(--shadow-lg)}
+.plan-top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:28px}
+.plan h3{font-size:16px;font-weight:600}
+.tagp{font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.price{display:flex;align-items:baseline;gap:8px;margin-top:20px}
+.price b{font-size:46px;font-weight:600;letter-spacing:-.045em;line-height:1}
+.price span{font-size:14px;color:var(--muted)}
+.plan > p{margin-top:12px;font-size:14.5px;color:var(--ink-2);min-height:46px}
+.plan ul{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:11px;font-size:14.5px;color:var(--ink-2)}
+.plan li{display:flex;gap:10px}
+.plan li svg{width:17px;height:17px;color:var(--accent);flex:none;margin-top:3px}
+.plan .btn{margin-top:auto}
+.fine{margin-top:20px;font-size:13px;color:var(--faint);text-align:center}
+
+/* Roadmap */
+.road{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.rm{padding:24px}
+.rm-when{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.rm-dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--faint)}
+.rm.done .rm-dot{background:var(--accent);border-color:var(--accent)}
+.rm.doing .rm-dot{border-color:var(--accent);background:linear-gradient(90deg,var(--accent) 50%,transparent 50%)}
+.rm h3{margin-top:18px;font-size:16.5px;font-weight:600;letter-spacing:-.01em}
+.rm p{margin-top:6px;font-size:14px;color:var(--muted)}
+
+/* Careers */
+.jobs{margin-top:48px;border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:1fr auto auto;gap:24px;align-items:center;padding:22px 4px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .15s;width:100%;background:none;border-left:0;border-right:0;border-top:0;text-align:left}
+.job:hover{background:var(--accent-soft)}
+.job h3{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.job p{font-size:14px;color:var(--muted);margin-top:2px}
+.job-meta{font-size:14px;color:var(--ink-2);white-space:nowrap}
+.job-arrow{width:34px;height:34px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--ink-2);transition:transform .15s}
+.job:hover .job-arrow{transform:translateX(3px)}
+.job-arrow svg{width:15px;height:15px}
+.urgent{display:inline-block;margin-left:8px;font-size:11.5px;font-weight:600;color:var(--loss);background:var(--loss-soft);padding:2px 8px;border-radius:999px;vertical-align:3px}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.faq-list{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-size:17px;font-weight:550;letter-spacing:-.01em;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:28px;height:28px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;flex:none;transition:transform .2s}
+summary .pm svg{width:14px;height:14px}
+details[open] summary .pm{transform:rotate(45deg)}
+details p{padding:0 48px 22px 0;margin-top:-6px;color:var(--ink-2);font-size:15.5px}
+
+/* Final CTA */
+.final{padding:120px 0;border-top:1px solid var(--line);overflow:hidden;
+  background:radial-gradient(900px 420px at 80% 50%, var(--accent-soft), transparent 70%)}
+.final-in{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.final h2{font-size:clamp(46px,6.4vw,84px);margin-top:0}
+.final .cta-row{justify-content:flex-start}
+.final small{display:block;margin-top:16px;font-size:13px;color:var(--faint)}
+.bill-art{width:100%;height:auto;max-width:560px;margin-left:auto;filter:drop-shadow(0 30px 40px rgba(12,22,18,.18))}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:64px 0 40px;font-size:14px;color:var(--muted)}
+.foot{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:40px}
+.foot h4{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:14px}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.foot li button{background:none;border:0;padding:0;cursor:pointer;color:var(--muted);font-size:14px}
+.foot li button:hover,.foot li a:hover{color:var(--ink)}
+.foot-tag{margin-top:14px;max-width:280px}
+.sys{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:6px 12px;border:1px solid var(--line-2);border-radius:999px;font-size:12.5px;color:var(--ink-2);background:var(--surface)}
+.sys i{width:7px;height:7px;border-radius:50%;background:var(--gain)}
+.legal{display:flex;justify-content:space-between;gap:24px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint)}
+.legal p + p{text-align:right}
+
+/* Modal */
+dialog{border:0;padding:0;background:transparent;color:var(--ink);max-width:calc(100vw - 32px);width:440px;overflow:visible}
+dialog::backdrop{background:rgba(5,10,8,.45);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+dialog[open]{animation:pop .22s cubic-bezier(.2,.9,.3,1.1)}
+dialog[open]::backdrop{animation:fade .2s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.sheet{background:var(--surface);border:1px solid var(--line-2);border-radius:20px;box-shadow:var(--shadow-lg);padding:24px}
+.sheet-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sheet-head h3{font-size:19px;font-weight:600;letter-spacing:-.02em}
+.x{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);display:grid;place-items:center;cursor:pointer;color:var(--ink-2)}
+.x svg{width:14px;height:14px}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}
+.chip{height:38px;border-radius:10px;border:1px solid var(--line-2);background:var(--surface);font-size:14px;font-weight:550;cursor:pointer;font-variant-numeric:tabular-nums}
+.chip.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.sheet .field{margin-top:12px}
+.sum{margin:18px 0 20px;display:grid;font-size:14.5px}
+.sum div{display:flex;justify-content:space-between;gap:16px;padding:9px 0}
+.sum dt{color:var(--ink-2)}
+.sum dd{margin:0;font-weight:550;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sum .tot{border-top:1px solid var(--line-2);margin-top:6px;padding-top:14px;font-size:16px}
+.sum .tot dt{color:var(--ink);font-weight:600}
+.sum .tot dd{font-weight:700}
+.sheet-fine{margin-top:12px;font-size:12px;color:var(--faint);text-align:center}
+.proc{list-style:none;padding:0;margin:22px 0 4px;display:grid;gap:16px}
+.proc li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--muted);transition:color .2s}
+.proc li.on,.proc li.ok{color:var(--ink)}
+.st{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line-2);display:grid;place-items:center;flex:none;position:relative}
+.proc li.on .st{border-color:var(--line-2);border-top-color:var(--accent);animation:spin .8s linear infinite}
+.proc li.ok .st{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.st svg{width:12px;height:12px;opacity:0}
+.proc li.ok .st svg{opacity:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sold{text-align:center;padding:8px 4px 0}
+.sold-ico{width:56px;height:56px;border-radius:16px;margin:4px auto 0;display:grid;place-items:center;background:var(--loss-soft);color:var(--loss);border:1px solid color-mix(in srgb, var(--loss) 25%, transparent)}
+.sold-ico svg{width:26px;height:26px}
+.sold h3{margin-top:18px;font-size:22px;font-weight:600;letter-spacing:-.02em}
+.sold p{margin-top:10px;font-size:15px;color:var(--ink-2);text-wrap:pretty}
+.sold .btn{margin-top:22px}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:24px;z-index:80;transform:translate(-50%,16px);opacity:0;pointer-events:none;
+  background:var(--btn);color:var(--btn-ink);padding:12px 18px;border-radius:12px;font-size:14px;font-weight:500;box-shadow:var(--shadow-lg);
+  transition:opacity .2s, transform .2s;max-width:calc(100vw - 32px);width:max-content;text-align:center;text-wrap:balance}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* Responsive */
+.only-sm{display:none}
+@media (max-width:1040px){
+  .links{display:none}
+  .app-body{grid-template-columns:1fr}
+  .app-side{display:none}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .road{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:30px 20px}
+  .stat-v{font-size:28px}
+}
+@media (max-width:860px){
+  .section{padding:88px 0}
+  .final{padding:88px 0}
+  .ue,.dev,.inv,.faq,.final-in,.thesis{grid-template-columns:1fr;gap:40px}
+  .head-row{flex-direction:column;align-items:flex-start;gap:0}
+  .head-row .sub{margin-top:18px;max-width:620px}
+  .calc{grid-template-columns:1fr}
+  .calc-in + .calc-in{border-left:0;border-top:1px solid var(--line)}
+  .plans{grid-template-columns:1fr;max-width:480px}
+  .quotes{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:28px 20px 28px 0;border-left:0}
+  .stat:nth-child(odd){border-right:1px solid var(--line)}
+  .stat:nth-child(even){padding-left:20px}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stat:first-child{padding-left:0}
+  .foot{grid-template-columns:repeat(3,1fr)}
+  .foot > div:first-child{grid-column:1 / -1}
+  .bill-art{margin:0 auto}
+  .app-grid{grid-template-columns:1fr}
+  .orders{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .hide-sm{display:none}
+  .only-sm{display:inline}
+  .t-live,.t-sep,.t-extra{display:none}
+  .nav-in{height:58px}
+  .nav-cta .btn-ghost{display:none}
+  .hero{padding-top:48px}
+  h1{margin:24px 0 20px}
+  .lede{font-size:17px}
+  .cta-row{flex-direction:column;align-items:stretch;gap:10px;margin-top:28px}
+  .final .cta-row{align-items:stretch}
+  .trust{gap:10px 12px}
+  .trust .yc{flex-basis:100%;justify-content:center}
+  .trust .yc + .trust-sep{display:none}
+  .mock-wrap{margin-top:44px;padding:0 12px}
+  .app{border-radius:14px 14px 0 0}
+  .app-url{display:none}
+  .app-main{padding:16px 14px}
+  .app-head h3{font-size:16px}
+  .panel{padding:16px}
+  .logos{padding:44px 0 48px}
+  .logo-row{justify-content:center;gap:22px 28px}
+  .lg1,.lg6{font-size:19px} .lg2,.lg5{font-size:18px} .lg3{font-size:22px}
+  .stat{padding:22px 12px 22px 0}
+  .stat:nth-child(even){padding-left:14px}
+  .stat-v{font-size:22px;letter-spacing:-.03em}
+  .stat-l{font-size:12.5px;align-items:flex-start}
+  .stat-l .live-dot{margin-top:5px}
+  .section{padding:72px 0}
+  .final{padding:72px 0}
+  .sub{font-size:16.5px}
+  .features{grid-template-columns:1fr;margin-top:40px}
+  .feat{padding:26px 22px 28px}
+  .ue,.calc,.quotes,.plans,.compare{margin-top:40px}
+  .step{grid-template-columns:40px 1fr auto;gap:12px;padding:16px}
+  .step-n{width:40px;height:40px;font-size:20px}
+  .step-amt{font-size:17px}
+  .pl{padding:22px}
+  .calc-in{padding:24px 20px}
+  .cmp th,.cmp td{padding:14px 10px;font-size:14px}
+  pre{font-size:11.5px;padding:16px 14px}
+  .code-mid{padding:10px 14px}
+  .cmp th:first-child,.cmp td:first-child{padding-left:16px}
+  .cmp thead th{font-size:12px}
+  .us-h svg{display:none}
+  .quote{padding:24px 22px 22px}
+  .quote blockquote{font-size:22px}
+  .inv-list > div{height:80px}
+  .f1,.f3{font-size:19px}
+  .road{grid-template-columns:1fr}
+  .gtm{grid-template-columns:1fr}
+  .gtm div,.gtm div + div{padding:14px 0;border-left:0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+  .gtm dd{margin:0;font-size:18px}
+  .tam{padding:28px 20px 20px}
+  .job{grid-template-columns:1fr auto;gap:12px;padding:18px 2px}
+  .job-meta{display:none}
+  .urgent{display:table;margin:6px 0 0}
+  summary{font-size:16px;padding:20px 0}
+  details p{padding-right:0}
+  .foot{grid-template-columns:repeat(2,1fr);gap:32px 24px}
+  .legal{flex-direction:column;gap:8px}
+  .legal p + p{text-align:left}
+  .sheet{padding:20px}
+  .chips{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11.25" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><path d="M13 13V3.5a9.5 9.5 0 1 1-9.035 6.564Z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<div class="ticker" aria-label="Live funding status">
+  <div class="wrap ticker-in">
+    <span class="live-dot" aria-hidden="true"></span><span class="t-live">Live</span><span class="t-sep">·</span>
+    <span id="t-label">Series A remaining</span> <strong class="num" id="t-remaining">$40,000,000.00</strong>
+    <span class="t-extra"><span class="t-sep">·</span> <span id="t-runway">60 days</span> of runway at current demand</span>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Dollars, home">
+      <svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg>
+      <span class="word">Dollars</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#product">Product</a><a href="#pricing">Pricing</a><a href="#developers">Developers</a><a href="#customers">Customers</a><a href="#careers">Careers</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn-ghost" data-toast="signin">Sign in</button>
+      <button class="btn btn-primary btn-sm" data-buy>Buy dollars</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="rosette" id="rosette" viewBox="0 0 1180 760" aria-hidden="true"></svg>
+  <div class="wrap">
+    <a class="pill" href="#investors">
+      <span class="pill-tag">New</span>
+      <span><span class="hide-sm">We raised a </span>$40M Series A to sell $200M of dollars</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <h1>Dollars, for <em>80¢</em>.</h1>
+    <p class="lede">Most AI startups spend years building a product with negative gross margins. We skipped straight to the end. Dollars sells real US dollars at 20% off, settled instantly.</p>
+    <div class="cta-row">
+      <button class="btn btn-primary btn-lg" data-buy>Buy dollars <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <button class="btn btn-secondary btn-lg" data-toast="sales">Talk to sales</button>
+    </div>
+    <div class="trust">
+      <span class="yc"><span class="yc-mark" aria-hidden="true">$</span>Backed by $ Combinator</span>
+      <span class="trust-sep" aria-hidden="true"></span>
+      <span>SOC 2 Type II</span>
+      <span class="trust-sep" aria-hidden="true"></span>
+      <span>FDIC-adjacent</span>
+    </div>
+  </div>
+
+  <div class="wrap mock-wrap">
+    <div class="app" role="img" aria-label="The Dollars app: buy $10,000 for $8,000, with a portfolio up 25% all time">
+      <div class="app-bar">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="app-url"><svg aria-hidden="true"><use href="#i-lock"/></svg>app.dollarsforless.com</span>
+      </div>
+      <div class="app-body">
+        <aside class="app-side" aria-hidden="true">
+          <div class="side-org"><span class="org-av">N</span><div><b>Northwind</b><small>Treasury · 4 members</small></div></div>
+          <span class="side-item on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.1 1.1-1.8 2.5-1.8s2.5.7 2.5 1.8-1 1.6-2.5 2-2.5.9-2.5 2 1.1 1.8 2.5 1.8 2.5-.7 2.5-1.8"/></svg>Buy dollars</span>
+          <span class="side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>Portfolio</span>
+          <span class="side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Orders</span>
+          <span class="side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg>Treasury</span>
+          <span class="side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3"/></svg>API keys</span>
+          <span class="side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>Settings</span>
+          <div class="side-foot"><small>Return this month</small><b class="num">+25.00%</b><small>Same as every month</small></div>
+        </aside>
+        <div class="app-main">
+          <div class="app-head">
+            <h3>Good afternoon, Priya</h3>
+            <span class="badge"><svg aria-hidden="true"><use href="#i-check"/></svg>Verified</span>
+          </div>
+          <div class="app-grid">
+            <div class="card panel">
+              <div class="panel-head">
+                <h4>Buy dollars</h4>
+                <div class="seg"><button class="on" type="button">Buy</button><button type="button" data-toast="sell">Sell</button></div>
+              </div>
+              <div class="fields">
+                <label class="field"><span class="f-label">You pay</span>
+                  <span class="f-row"><input class="f-amt" id="pay" inputmode="decimal" autocomplete="off" value="8,000.00" aria-label="Amount you pay in US dollars"><span class="ccy"><i>$</i>USD</span></span>
+                </label>
+                <span class="swap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+                <div class="field"><span class="f-label">You receive</span>
+                  <span class="f-row"><output class="f-amt" id="recv">10,000.00</output><span class="ccy"><i>$</i>USD</span></span>
+                </div>
+              </div>
+              <dl class="rate">
+                <div><dt>Rate</dt><dd>1 USD = 0.80 USD</dd></div>
+                <div><dt>Fee</dt><dd>$0.00</dd></div>
+                <div><dt>Arrives</dt><dd>Instantly</dd></div>
+              </dl>
+              <button class="btn btn-primary btn-block" id="widget-buy" type="button">Buy $10,000.00</button>
+            </div>
+            <div class="card panel">
+              <div class="panel-head">
+                <span class="f-label">Total balance</span>
+                <div class="seg"><button type="button">1M</button><button type="button">1Y</button><button class="on" type="button">All</button></div>
+              </div>
+              <div class="p-bal num">$125,000.00</div>
+              <div class="p-delta"><span class="up num">▲ $25,000.00 (25.00%)</span><span>all time</span></div>
+              <svg class="chart" viewBox="0 0 520 150" preserveAspectRatio="none" aria-hidden="true">
+                <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".18"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0 37.5H520M0 75H520M0 112.5H520" stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+                <path d="M0 150H49.5V105H222.9V85H371.4V35H495.2V25H520V150Z" fill="url(#area)"/>
+                <path d="M0 150H49.5V114H222.9V98H371.4V58H495.2V50H520" fill="none" stroke="var(--faint)" stroke-width="1.5" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
+                <path d="M0 150H49.5V105H222.9V85H371.4V35H495.2V25H520" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              <div class="chart-x"><span>Oct 9</span><span>Oct 16</span><span>Oct 23</span><span>Today</span></div>
+              <div class="legend"><span><i></i>Balance</span><span><i class="cost"></i>Cost basis</span></div>
+            </div>
+          </div>
+          <div class="card orders">
+            <div class="panel-head"><h4>Recent orders</h4><span class="link-sm">View all</span></div>
+            <table class="tbl">
+              <thead><tr><th>Order</th><th>Date</th><th class="r">You paid</th><th class="r">You received</th><th class="r">Return</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">ord_9Hk2Qw</td><td>Oct 29</td><td class="r num">$8,000.00</td><td class="r num">$10,000.00</td><td class="r num gain">+25.00%</td><td><span class="status">Settled</span></td></tr>
+                <tr><td class="mono">ord_7Qw1Zp</td><td>Oct 24</td><td class="r num">$40,000.00</td><td class="r num">$50,000.00</td><td class="r num gain">+25.00%</td><td><span class="status">Settled</span></td></tr>
+                <tr><td class="mono">ord_3Lm8Kd</td><td>Oct 18</td><td class="r num">$16,000.00</td><td class="r num">$20,000.00</td><td class="r num gain">+25.00%</td><td><span class="status">Settled</span></td></tr>
+                <tr><td class="mono">ord_1Zx5Ty</td><td>Oct 11</td><td class="r num">$36,000.00</td><td class="r num">$45,000.00</td><td class="r num gain">+25.00%</td><td><span class="status">Settled</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="logos" aria-label="Customers">
+  <div class="wrap">
+    <p>Trusted by finance teams that have done the math</p>
+    <div class="logo-row">
+      <span class="lg lg1">Northwind</span>
+      <span class="lg lg2"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 14 10 3l8 11z" fill="currentColor"/></svg>kestrel</span>
+      <span class="lg lg3">Arbitrage &amp; Co.</span>
+      <span class="lg lg4">FREE MONEY LLC</span>
+      <span class="lg lg5"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="7" cy="10" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="13" cy="10" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Loopback</span>
+      <span class="lg lg6">Halcyon Capital</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Company metrics">
+  <div class="wrap stats-grid">
+    <div class="stat"><div class="stat-v num" id="s-sold">$0</div><div class="stat-l"><span class="live-dot" aria-hidden="true"></span>Dollars sold since our Series A</div></div>
+    <div class="stat"><div class="stat-v num" id="s-saved">$0</div><div class="stat-l">Saved by our customers</div></div>
+    <div class="stat"><div class="stat-v num loss">−25.0%</div><div class="stat-l">Gross margin, every order</div></div>
+    <div class="stat"><div class="stat-v num gain">+25.00%</div><div class="stat-l">Customer return, every order</div></div>
+  </div>
+</section>
+
+<section class="section" id="thesis">
+  <div class="wrap thesis">
+    <div>
+      <span class="eyebrow">Our thesis</span>
+      <h2>Every AI startup sells dollars for 80¢. <em>We’re just honest about it.</em></h2>
+      <p class="sub">Other startups spend years on models, agents and copilots before they find out their gross margin is negative. We started there. No GPUs, no inference bill, no pivot. Just the business model, at hyperscale.</p>
+      <dl class="gtm">
+        <div><dt>Market share target</dt><dd>100%</dd></div>
+        <div><dt>Time to product-market fit</dt><dd>Instant</dd></div>
+        <div><dt>Churned customers</dt><dd>0</dd></div>
+      </dl>
+    </div>
+    <figure class="card tam">
+      <div class="tam-circle">
+        <div>
+          <span class="tam-tags"><b>TAM</b><b>SAM</b><b>SOM</b></span>
+          <span class="tam-v">$2.3T</span>
+          <span class="tam-l">Every US dollar in circulation. We’re going after all of it.</span>
+        </div>
+      </div>
+      <figcaption>Drawn to scale.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="product">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <span class="eyebrow">Product</span>
+        <h2>Everything you expect from a dollar. <em>For less.</em></h2>
+      </div>
+      <p class="sub">We rebuilt the dollar-buying experience from first principles. The first principle was the price.</p>
+    </div>
+    <div class="features">
+      <div class="feat">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5V4a1 1 0 0 1 1-1h7.5l9.3 9.3a1 1 0 0 1 0 1.4l-7.1 7.1a1 1 0 0 1-1.4 0z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg></span>
+        <h3>A better price, always</h3>
+        <p>Every dollar costs 80¢. No spreads, no hidden fees, no minimums. Our CFO is still looking for the catch.</p>
+      </div>
+      <div class="feat">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <h3>Instant settlement</h3>
+        <p>Dollars arrive as dollars. No conversion, no FX exposure, no T+2. You send cents, you get dollars.</p>
+      </div>
+      <div class="feat">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 12h13"/></svg></span>
+        <h3>Zero volatility</h3>
+        <p>A dollar has been worth exactly one dollar since 1792. We built our entire risk model on that.</p>
+      </div>
+      <div class="feat">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.4 3.2 8.1 7.5 9 4.3-.9 7.5-4.6 7.5-9V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
+        <h3>Bank-grade security</h3>
+        <p>SOC 2 Type II, end-to-end encryption, and a finance team that counts every dollar on its way out the door.</p>
+      </div>
+      <div class="feat">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+        <h3>A 25% return on every order</h3>
+        <p>Every order is up 25% the moment it settles. This isn’t financial advice. It’s arithmetic.</p>
+      </div>
+      <div class="feat">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></span>
+        <h3>Built for compounding</h3>
+        <p>Spend your new dollars on more dollars. Our best customers have done it 41 times. Our growth team calls it retention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="economics">
+  <div class="wrap">
+    <span class="eyebrow">Unit economics</span>
+    <h2>We lose 20¢ on every dollar. <em>We make it up in volume.</em></h2>
+    <div class="ue">
+      <div class="flow">
+        <div class="card step"><span class="step-n">1</span><div><h3>You send us 80¢</h3><p>Card, ACH or wire. We’re not picky.</p></div><span class="step-amt num">$0.80</span></div>
+        <div class="card step"><span class="step-n">2</span><div><h3>We send you a dollar</h3><p>Instantly, every time, no questions asked.</p></div><span class="step-amt num gain">$1.00</span></div>
+        <div class="card step"><span class="step-n">3</span><div><h3>We do that a lot</h3><p>This is the part we’re still working on.</p></div><span class="step-amt num">×∞</span></div>
+      </div>
+      <div class="card pl">
+        <h3>Per dollar sold</h3>
+        <table>
+          <tr><td>Revenue</td><td>$0.80</td></tr>
+          <tr class="rule"><td>Cost of dollars sold</td><td>($1.00)</td></tr>
+          <tr><td>Gross profit</td><td class="loss">($0.20)</td></tr>
+          <tr><td>Gross margin</td><td class="loss">−25.0%</td></tr>
+          <tr><td>Customer acquisition cost</td><td>$0.00</td></tr>
+          <tr class="total"><td>Path to profitability</td><td>Volume</td></tr>
+        </table>
+        <small>Unaudited. Very unaudited.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="calculator">
+  <div class="wrap">
+    <span class="eyebrow">Savings calculator</span>
+    <h2>See how much you’ll save.</h2>
+    <div class="card calc">
+      <div class="calc-in">
+        <label class="calc-q" for="amt">How many dollars do you want?</label>
+        <div class="calc-amt num" id="c-amt">$10,000</div>
+        <input type="range" id="amt" min="0" max="1000" step="1" value="400" aria-describedby="c-note">
+        <div class="ticks" aria-hidden="true"><span>$100</span><span>$1K</span><span>$10K</span><span>$100K</span><span>$1M</span><span>$10M</span></div>
+        <p class="calc-note" id="c-note"><svg aria-hidden="true"><use href="#i-check"/></svg><span id="c-note-t">A popular choice for teams getting started.</span></p>
+      </div>
+      <div class="calc-in">
+        <dl class="res">
+          <div><dt>You pay</dt><dd id="c-pay">$8,000.00</dd></div>
+          <div><dt>You receive</dt><dd id="c-recv">$10,000.00</dd></div>
+          <div class="big"><dt>You save</dt><dd class="gain" id="c-save">$2,000.00</dd></div>
+          <div><dt>Our loss on your order</dt><dd class="loss" id="c-loss">−$2,000.00</dd></div>
+        </dl>
+        <div class="meter">
+          <div class="meter-top"><span>Series A left after your order</span><b id="c-left">$39,998,000</b></div>
+          <div class="meter-bar"><i id="c-bar" style="width:99%"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="developers">
+  <div class="wrap dev">
+    <div>
+      <span class="eyebrow">Developers</span>
+      <h2>Dollars, by API.</h2>
+      <p class="sub">Buy dollars from your backend, your CI or a cron job that runs every second. Please don’t do the last one.</p>
+      <ul class="checks">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Idempotent orders, so you never buy the same dollars twice.</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>A webhook for every dollar that leaves our account.</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>SDKs for TypeScript, Python, Go and Rust.</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Rate limits generous enough to end the company.</li>
+      </ul>
+    </div>
+    <div class="code" role="img" aria-label="Example API request creating an order for $10,000 at a price of $8,000">
+      <div class="code-bar"><span class="meth">POST</span><span class="path">/v1/orders</span><span class="lang" aria-hidden="true"><span class="on">cURL</span><span class="hide-sm">Node</span><span class="hide-sm">Python</span></span></div>
+<pre><span class="c-f">curl</span> \
+  https://api.dollarsforless.com/v1/orders \
+  <span class="c-m">-u</span> sk_live_<span class="c-m">••••••••••••</span>: \
+  <span class="c-m">-d</span> amount=<span class="c-n">1000000</span> \
+  <span class="c-m">-d</span> currency=<span class="c-s">usd</span></pre>
+      <div class="code-mid"><b>200 OK</b><span>·</span><span>41 ms</span></div>
+<pre>{
+  <span class="c-k">"id"</span>: <span class="c-s">"ord_1QxR8f2kLmN0"</span>,
+  <span class="c-k">"amount"</span>: <span class="c-n">1000000</span>,
+  <span class="c-k">"price"</span>: <span class="c-n">800000</span>,
+  <span class="c-k">"currency"</span>: <span class="c-s">"usd"</span>,
+  <span class="c-k">"gross_margin"</span>: <span class="c-n">-0.25</span>,
+  <span class="c-k">"status"</span>: <span class="c-s">"settled"</span>,
+  <span class="c-k">"path_to_profitability"</span>: <span class="c-n">null</span>
+}</pre>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="compare">
+  <div class="wrap">
+    <span class="eyebrow">Compare</span>
+    <h2>The best price for a dollar, anywhere.</h2>
+    <div class="card compare">
+      <table class="cmp">
+        <thead><tr><th scope="col"><span class="sr">Feature</span></th><th scope="col" class="us"><span class="us-h"><svg aria-hidden="true"><use href="#i-mark"/></svg>Dollars</span></th><th scope="col">Your bank</th><th scope="col">An ATM</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Price of $1.00</th><td class="us">$0.80</td><td>$1.00</td><td>$1.00</td></tr>
+          <tr><th scope="row">Fees</th><td class="us">None</td><td>$12/mo</td><td>$3.50</td></tr>
+          <tr><th scope="row">Settlement</th><td class="us">Instant</td><td>1–3 days</td><td>Instant</td></tr>
+          <tr><th scope="row">Return per order</th><td class="us gain">+25%</td><td>0%</td><td class="loss">−$3.50</td></tr>
+          <tr><th scope="row">Profitable</th><td class="us">No</td><td>Yes</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="customers">
+  <div class="wrap">
+    <span class="eyebrow">Customers</span>
+    <h2>Loved by people who like money.</h2>
+    <div class="quotes">
+      <figure class="card quote" style="margin:0">
+        <blockquote>“We moved our entire treasury to Dollars and our cash went up 25% overnight. The board has questions. Good questions.”</blockquote>
+        <figcaption class="who"><span class="av" style="background:linear-gradient(135deg,#1E5B8C,#0E2F4D)">PN</span><span><b>Priya Natarajan</b><small>CFO, Northwind</small></span></figcaption>
+      </figure>
+      <figure class="card quote" style="margin:0">
+        <blockquote>“I bought dollars, then bought more dollars with those dollars. I’ve done it 41 times. I don’t understand why anyone still works.”</blockquote>
+        <figcaption class="who"><span class="av" style="background:linear-gradient(135deg,#7C5A2E,#4A3317)">MT</span><span><b>Marcus Tell</b><small>Customer since August</small></span></figcaption>
+      </figure>
+      <figure class="card quote" style="margin:0">
+        <blockquote>“Best onboarding I’ve seen in fintech. KYC took ninety seconds, and then they just… gave me money.”</blockquote>
+        <figcaption class="who"><span class="av" style="background:linear-gradient(135deg,#0A6B4B,#063D2B)">DK</span><span><b>Dana Kim</b><small>Head of Finance, Kestrel</small></span></figcaption>
+      </figure>
+      <figure class="card quote" style="margin:0">
+        <blockquote>“I don’t get it. Can’t you just have a dollar?”</blockquote>
+        <figcaption class="who"><span class="av av-hn">Y</span><span><b>Top comment</b><small>Hacker News</small></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="investors">
+  <div class="wrap">
+    <span class="eyebrow">Investors</span>
+    <h2>Backed by investors who believe in volume.</h2>
+    <div class="inv">
+      <div class="inv-list">
+        <div class="yc-cell"><span class="yc-mark" aria-hidden="true">$</span>$ Combinator</div>
+        <div class="f1">Greater Fool Capital</div>
+        <div class="f2">Exit Liquidity Partners</div>
+        <div class="f3">Bagholder Ventures</div>
+        <div class="f4">Runway Fund</div>
+        <div class="f2">Sunk Cost Partners</div>
+        <div class="angels">and 40+ angels who were told this was an AI company</div>
+      </div>
+      <figure class="inv-quote" style="margin:0">
+        <blockquote>The strongest top-line growth we’ve ever seen in a portfolio company. We’ve asked them to stop.</blockquote>
+        <p>Managing Partner, Greater Fool Capital</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="wrap">
+    <span class="eyebrow">Pricing</span>
+    <h2>Simple, transparent, unsustainable.</h2>
+    <div class="plans">
+      <div class="card plan">
+        <div class="plan-top"><h3>Starter</h3></div>
+        <div class="price"><b class="num">$0.80</b><span>per dollar</span></div>
+        <p>For individuals getting started with money.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Up to $10,000 of dollars a month</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Instant settlement</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Email support</li>
+        </ul>
+        <button class="btn btn-secondary btn-block" data-buy>Start buying</button>
+      </div>
+      <div class="card plan pop">
+        <div class="plan-top"><h3>Growth</h3><span class="tagp">Most popular</span></div>
+        <div class="price"><b class="num">$0.79</b><span>per dollar</span></div>
+        <p>For teams that need more dollars.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Up to $1M of dollars a month</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Full API access</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>A dedicated account manager</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Volume pricing: we lose more, faster</li>
+        </ul>
+        <button class="btn btn-primary btn-block" data-buy>Start buying</button>
+      </div>
+      <div class="card plan">
+        <div class="plan-top"><h3>Enterprise</h3></div>
+        <div class="price"><b>Custom</b></div>
+        <p>For organizations buying dollars at scale.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Unlimited dollars*</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>SSO and SCIM</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Custom contracts and invoicing</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>24/7 support on our CEO’s cell</li>
+        </ul>
+        <button class="btn btn-secondary btn-block" data-toast="sales">Talk to sales</button>
+      </div>
+    </div>
+    <p class="fine">*While our Series A lasts. See the live counter at the top of this page.</p>
+  </div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="wrap">
+    <span class="eyebrow">Roadmap</span>
+    <h2>What we’re building next.</h2>
+    <div class="road">
+      <div class="card rm done"><div class="rm-when"><span class="rm-dot"></span>Shipped</div><h3>Dollars for 80¢</h3><p>Our core product. Customers love it. Accountants less so.</p></div>
+      <div class="card rm doing"><div class="rm-when"><span class="rm-dot"></span>Q1 2027</div><h3>Euros for €0.80</h3><p>Same great margins, now in a second currency.</p></div>
+      <div class="card rm"><div class="rm-when"><span class="rm-dot"></span>Q2 2027</div><h3>AI-native dollars</h3><p>The same dollars, now with AI.</p></div>
+      <div class="card rm"><div class="rm-when"><span class="rm-dot"></span>Exploring</div><h3>Profitability</h3><p>Early research. Very early.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="careers">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <span class="eyebrow">Careers</span>
+        <h2>Join us while we’re still here.</h2>
+      </div>
+      <p class="sub">We’re a small, in-person team in San Francisco. Competitive salary, paid in dollars, bought at a discount.</p>
+    </div>
+    <div class="jobs">
+      <button class="job" type="button" data-toast="role"><span><h3>Founding CFO<span class="urgent">Urgent</span></h3><p>Finance · Find out what happened</p></span><span class="job-meta">San Francisco</span><span class="job-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+      <button class="job" type="button" data-toast="role"><span><h3>Head of Unit Economics</h3><p>Finance · A new role, for some reason</p></span><span class="job-meta">San Francisco</span><span class="job-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+      <button class="job" type="button" data-toast="role"><span><h3>Growth Engineer</h3><p>Engineering · Help us lose money faster</p></span><span class="job-meta">San Francisco or remote</span><span class="job-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+      <button class="job" type="button" data-toast="role"><span><h3>Treasury Associate</h3><p>Operations · Count what’s left, daily</p></span><span class="job-meta">San Francisco</span><span class="job-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap faq">
+    <div>
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions, answered.</h2>
+      <p class="sub">Mostly by our founders, at a dinner with our investors.</p>
+    </div>
+    <div class="faq-list">
+      <details open><summary>How do you make money?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>We don’t. Next question.</p></details>
+      <details><summary>Why not build an AI product first?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>We looked at where those end up and cut out the middle step.</p></details>
+      <details><summary>Is this sustainable?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>We prefer the term “pre-profit.”</p></details>
+      <details><summary>Where do the dollars come from?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>From our investors. Each dollar you buy is 80% your money and 20% theirs. They’ve been very supportive.</p></details>
+      <details><summary>What’s the catch?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>Our legal team spent six weeks looking for one. They’ve since moved on to other opportunities.</p></details>
+      <details><summary>How many dollars can I buy?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>As many as we have. The live counter at the top of this page shows how many that is.</p></details>
+      <details><summary>Can I buy dollars with the dollars I bought?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>Yes. Our growth team calls this retention. Our finance team calls it something else.</p></details>
+      <details><summary>What’s your path to profitability?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>Volume. And AI.</p></details>
+      <details><summary>Is this financial advice?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p>No. It’s arithmetic.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap final-in">
+    <div>
+      <h2>Money has never been <em>this cheap.</em></h2>
+      <p class="sub">Join the teams buying dollars for less. Setup takes two minutes. The dollars take less.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary btn-lg" data-buy>Buy dollars <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <button class="btn btn-secondary btn-lg" data-toast="sales">Talk to sales</button>
+      </div>
+      <small>Offer valid while our Series A lasts.</small>
+    </div>
+    <svg class="bill-art" id="bill" viewBox="0 0 600 380" role="img" aria-label="A one-dollar bill with a price tag: was $1.00, now $0.80"></svg>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top" aria-label="Dollars, home"><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><span class="word">Dollars</span></a>
+        <p class="foot-tag">Dollars, for 80¢. Proudly losing money in San Francisco since 2026.</p>
+        <button class="sys" type="button" data-toast="status"><i aria-hidden="true"></i>All systems operational</button>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="#calculator">Savings calculator</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#developers">API</a></li><li><a href="#roadmap">Roadmap</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#economics">Unit economics</a></li><li><a href="#careers">Careers</a></li><li><a href="#investors">Investors</a></li><li><button type="button" data-toast="press">Press</button></li></ul></div>
+      <div><h4>Legal</h4><ul><li><button type="button" data-toast="legal">Terms</button></li><li><button type="button" data-toast="legal">Privacy</button></li><li><button type="button" data-toast="legal">Disclosures</button></li></ul></div>
+    </div>
+    <div class="legal">
+      <p>© 2026 Dollars, Inc. Dollars is not a bank. Dollars is barely a business.</p>
+      <p>This site is a parody. We don’t sell dollars, and nothing here can be bought.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="buy" aria-labelledby="buy-title">
+  <div class="sheet">
+    <div id="step-order">
+      <div class="sheet-head"><h3 id="buy-title">Buy dollars</h3><button class="x" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <div class="chips" role="group" aria-label="Amount">
+        <button class="chip" type="button" data-amt="100">$100</button>
+        <button class="chip" type="button" data-amt="1000">$1,000</button>
+        <button class="chip" type="button" data-amt="10000">$10,000</button>
+        <button class="chip" type="button" data-amt="100000">$100,000</button>
+      </div>
+      <label class="field"><span class="f-label">Dollars you want</span>
+        <span class="f-row"><input class="f-amt" id="m-amt" inputmode="decimal" autocomplete="off" value="1,000.00"><span class="ccy"><i>$</i>USD</span></span>
+      </label>
+      <dl class="sum">
+        <div><dt>Dollars</dt><dd id="m-d">$1,000.00</dd></div>
+        <div><dt>Dollars discount</dt><dd class="gain" id="m-disc">−$200.00</dd></div>
+        <div><dt>Fees</dt><dd>$0.00</dd></div>
+        <div class="tot"><dt>You pay</dt><dd id="m-pay">$800.00</dd></div>
+      </dl>
+      <button class="btn btn-primary btn-block btn-lg" type="button" id="m-go">Buy $1,000.00 for $800.00</button>
+      <p class="sheet-fine">By continuing, you agree this is a good deal.</p>
+    </div>
+    <div id="step-proc" hidden>
+      <div class="sheet-head"><h3>Securing your dollars</h3></div>
+      <ul class="proc">
+        <li><span class="st"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Verifying your identity</li>
+        <li><span class="st"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span>Reserving <span id="p-amt">$1,000.00</span></span></li>
+        <li><span class="st"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Checking our bank balance</li>
+      </ul>
+    </div>
+    <div id="step-sold" hidden>
+      <div class="sold">
+        <div class="sold-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16h.01"/></svg></div>
+        <h3>We’re sold out of dollars.</h3>
+        <p>Demand for 80¢ dollars has outpaced our Series A. You’re <b id="w-pos" class="num">#48,213</b> on the waitlist. We’ll release more dollars after our Series B closes.</p>
+        <p style="font-size:13px;color:var(--faint)">You haven’t been charged.</p>
+        <button class="btn btn-primary btn-block" type="button" data-close>Back to site</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+  const usd0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  const plain = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const neg = v => '−' + usd.format(v);
+
+  // One model drives every live figure, so they always tie:
+  // each dollar sold costs the Series A 20¢ and saves a customer the same 20¢.
+  const PRICE = 0.80, RAISED = 40e6, RUNWAY_DAYS = 60;
+  const EPOCH = Date.UTC(2026, 9, 30);
+  const BURN_PER_MS = RAISED / (RUNWAY_DAYS * 864e5);
+  const lost = () => Math.min(RAISED, Math.max(0, (Date.now() - EPOCH) * BURN_PER_MS));
+
+  const tRem = $('#t-remaining'), tRun = $('#t-runway'), tLabel = $('#t-label');
+  const sSold = $('#s-sold'), sSaved = $('#s-saved');
+  function tick() {
+    const l = lost(), left = RAISED - l;
+    tRem.textContent = usd.format(left);
+    if (left <= 0) { tLabel.textContent = 'Series A remaining'; tRun.textContent = '0 days'; tRem.textContent = '$0.00 · Raising our Series B'; }
+    else {
+      const days = left / (BURN_PER_MS * 864e5);
+      tRun.textContent = days >= 2 ? Math.floor(days) + ' days' : Math.max(1, Math.floor(days * 24)) + ' hours';
+    }
+    sSold.textContent = usd0.format(Math.floor(l / (1 - PRICE)));
+    sSaved.textContent = usd0.format(Math.floor(l));
+    updateCalcLeft();
+  }
+
+  // Rosette: banknote-style guilloché behind the headline.
+  function rosette(svg, cx, cy, rx, ry, n, w, op) {
+    const ns = 'http://www.w3.org/2000/svg';
+    const g = document.createElementNS(ns, 'g');
+    g.setAttribute('fill', 'none'); g.setAttribute('stroke', 'currentColor');
+    g.setAttribute('stroke-width', w); g.setAttribute('opacity', op);
+    for (let i = 0; i < n; i++) {
+      const e = document.createElementNS(ns, 'ellipse');
+      e.setAttribute('cx', cx); e.setAttribute('cy', cy); e.setAttribute('rx', rx); e.setAttribute('ry', ry);
+      e.setAttribute('transform', `rotate(${(180 / n) * i} ${cx} ${cy})`);
+      g.appendChild(e);
+    }
+    svg.appendChild(g);
+    return g;
+  }
+  const ro = $('#rosette');
+  rosette(ro, 590, 330, 520, 190, 48, .7, .22);
+  rosette(ro, 590, 330, 330, 120, 36, .6, .18);
+
+  // Bill + price tag illustration.
+  const bill = $('#bill');
+  bill.innerHTML = `
+    <defs>
+      <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6EFE2"/><stop offset="1" stop-color="#C7DAC5"/></linearGradient>
+      <pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V5" stroke="#244A39" stroke-opacity=".07"/></pattern>
+      <clipPath id="billclip"><rect width="500" height="220" rx="10"/></clipPath>
+    </defs>
+    <g transform="translate(40 70) rotate(-7 250 110)">
+      <rect width="500" height="220" rx="10" fill="url(#bg1)"/>
+      <rect width="500" height="220" rx="10" fill="url(#hatch)"/>
+      <g clip-path="url(#billclip)" id="bill-ros" color="#244A39"></g>
+      <rect x="11" y="11" width="478" height="198" rx="6" fill="none" stroke="#244A39" stroke-opacity=".55" stroke-width="1.5"/>
+      <rect x="17" y="17" width="466" height="186" rx="4" fill="none" stroke="#244A39" stroke-opacity=".22"/>
+      <ellipse cx="250" cy="112" rx="60" ry="70" fill="#EEF4EB" stroke="#244A39" stroke-opacity=".45" stroke-width="1.2"/>
+      <ellipse cx="250" cy="112" rx="53" ry="63" fill="none" stroke="#244A39" stroke-opacity=".2"/>
+      <text x="250" y="141" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="88" fill="#1D3F31">$</text>
+      <g font-family="Instrument Serif, Georgia, serif" font-size="44" fill="#1D3F31">
+        <text x="34" y="62">1</text><text x="466" y="62" text-anchor="end">1</text>
+        <text x="34" y="192">1</text><text x="466" y="192" text-anchor="end">1</text>
+      </g>
+      <text x="250" y="33" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="9.5" letter-spacing="4" fill="#1D3F31" opacity=".7">DOLLARS, INC.</text>
+      <text x="250" y="201" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="18" letter-spacing="6" fill="#1D3F31">ONE DOLLAR</text>
+    </g>
+    <g transform="translate(452 186) rotate(16)">
+      <path d="M0 26 24 0H146a10 10 0 0 1 10 10V104a10 10 0 0 1-10 10H24L0 88Z" fill="#FFFCF4" stroke="#D8CDB3" stroke-width="1.2"/>
+      <circle cx="22" cy="57" r="6" fill="none" stroke="#B8A882" stroke-width="1.5"/>
+      <text x="92" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#8A8170" letter-spacing=".5">WAS $1.00</text>
+      <path d="M58 34H126" stroke="#C2410C" stroke-width="1.8"/>
+      <text x="92" y="86" text-anchor="middle" font-family="Inter, sans-serif" font-size="38" font-weight="700" fill="#0C1612" letter-spacing="-1.5">$0.80</text>
+    </g>`;
+  const br = bill.querySelector('#bill-ros');
+  rosette(br, 120, 110, 70, 26, 24, .7, .5);
+  rosette(br, 380, 110, 70, 26, 24, .7, .5);
+
+  // Toasts
+  const toasts = {
+    signin: 'Sign-in is paused while we extend our runway.',
+    sales: 'Our sales team is in a board meeting, explaining the business model.',
+    sell: 'Sell dollars? For dollars? No one has ever asked.',
+    role: 'This role was filled by our CEO. So were the others.',
+    status: 'All systems operational. Margins are not.',
+    press: 'For press inquiries, please wait for the post-mortem.',
+    legal: 'Our legal team has moved on to other opportunities.'
+  };
+  const toastEl = $('#toast'); let toastT;
+  function toast(msg) {
+    toastEl.textContent = msg; toastEl.classList.add('show');
+    clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('show'), 3400);
+  }
+  $$('[data-toast]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); toast(toasts[b.dataset.toast]); }));
+
+  // Nav border on scroll
+  const nav = $('#nav');
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Hero widget
+  const parse = s => { const v = parseFloat(String(s).replace(/[^0-9.]/g, '')); return isFinite(v) ? Math.min(v, 1e12) : 0; };
+  const pay = $('#pay'), recv = $('#recv'), wbuy = $('#widget-buy');
+  function syncWidget() {
+    const p = parse(pay.value), r = p / PRICE;
+    recv.textContent = plain.format(r);
+    wbuy.textContent = r > 0 ? 'Buy ' + usd.format(r) : 'Enter an amount';
+  }
+  pay.addEventListener('input', syncWidget);
+  pay.addEventListener('blur', () => { pay.value = plain.format(parse(pay.value)); syncWidget(); });
+  wbuy.addEventListener('click', () => openBuy(parse(pay.value) / PRICE || 1000));
+
+  // Calculator (log scale, $100 to $10M)
+  const range = $('#amt');
+  const nice = raw => { const m = Math.pow(10, Math.floor(Math.log10(raw)) - 1); return Math.round(raw / m) * m; };
+  let calcAmt = 10000;
+  function updateCalcLeft() {
+    const left = Math.max(0, RAISED - lost() - calcAmt * (1 - PRICE));
+    $('#c-left').textContent = usd0.format(left);
+    $('#c-bar').style.width = (left / RAISED * 100).toFixed(2) + '%';
+  }
+  function calc() {
+    const v = +range.value;
+    range.style.setProperty('--p', (v / 10) + '%');
+    calcAmt = nice(Math.pow(10, 2 + v / 1000 * 5));
+    const save = calcAmt * (1 - PRICE);
+    $('#c-amt').textContent = usd0.format(calcAmt);
+    $('#c-pay').textContent = usd.format(calcAmt * PRICE);
+    $('#c-recv').textContent = usd.format(calcAmt);
+    $('#c-save').textContent = usd.format(save);
+    $('#c-loss').textContent = neg(save);
+    $('#c-note-t').textContent =
+      calcAmt < 1000 ? 'Start small. Dollars are a big commitment.' :
+      calcAmt < 100000 ? 'A popular choice for teams getting started.' :
+      calcAmt < 1000000 ? 'Your account manager will call to thank you. Nervously.' :
+      calcAmt < 10000000 ? 'Our CFO has been notified.' : 'Our board has been notified.';
+    updateCalcLeft();
+  }
+  range.addEventListener('input', calc);
+
+  // Checkout
+  const dlg = $('#buy'), mAmt = $('#m-amt');
+  const steps = { order: $('#step-order'), proc: $('#step-proc'), sold: $('#step-sold') };
+  const show = k => Object.entries(steps).forEach(([n, el]) => el.hidden = n !== k);
+  function syncModal() {
+    const d = parse(mAmt.value), p = d * PRICE;
+    $('#m-d').textContent = usd.format(d);
+    $('#m-disc').textContent = neg(d - p);
+    $('#m-pay').textContent = usd.format(p);
+    $('#m-go').textContent = d > 0 ? `Buy ${usd.format(d)} for ${usd.format(p)}` : 'Enter an amount';
+    $('#m-go').disabled = !(d > 0);
+    $$('.chip').forEach(c => c.classList.toggle('on', +c.dataset.amt === d));
+  }
+  function openBuy(amount) {
+    mAmt.value = plain.format(amount || 1000);
+    syncModal(); show('order');
+    if (!dlg.open) dlg.showModal();
+  }
+  $$('[data-buy]').forEach(b => b.addEventListener('click', () => openBuy(1000)));
+  $$('.chip').forEach(c => c.addEventListener('click', () => { mAmt.value = plain.format(+c.dataset.amt); syncModal(); }));
+  mAmt.addEventListener('input', syncModal);
+  mAmt.addEventListener('blur', () => { mAmt.value = plain.format(parse(mAmt.value)); syncModal(); });
+  $$('[data-close]').forEach(b => b.addEventListener('click', () => dlg.close()));
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+  let timers = [];
+  dlg.addEventListener('close', () => { timers.forEach(clearTimeout); timers = []; });
+  $('#m-go').addEventListener('click', () => {
+    const d = parse(mAmt.value); if (!(d > 0)) return;
+    $('#p-amt').textContent = usd.format(d);
+    const items = $$('.proc li');
+    items.forEach(li => li.className = '');
+    show('proc');
+    const at = (ms, fn) => timers.push(setTimeout(fn, ms));
+    at(0, () => items[0].className = 'on');
+    at(700, () => { items[0].className = 'ok'; items[1].className = 'on'; });
+    at(1400, () => { items[1].className = 'ok'; items[2].className = 'on'; });
+    at(3000, () => {
+      $('#w-pos').textContent = '#' + (40000 + Math.floor(lost() / 830)).toLocaleString('en-US');
+      show('sold');
+    });
+  });
+
+  calc(); syncWidget(); tick();
+  setInterval(tick, 100);
+})();
+</script>
+</body>
+</html>
